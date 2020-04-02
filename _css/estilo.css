@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@font-face{
+    font-family: fontelogo;
+    src: url("../_fonts/bubblegum-sans-regular.otf"); 
+}
+
+p {
+    font-family: calibri;
+	text-align: justify; 
+	text-indent: 50px;
+    text-decoration: none;
+}
+
+a {
+    color: darkblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    color: crimson;
+}
+
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background-image: url("../_imagens/glass-logo-peq.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 90px;
+}
+
+header#cabecalho img#icone{
+    position: absolute;
+    left: 800px;
+    top: 20px;
+}
+
+header#cabecalho h1{
+    font-family: 'fontelogo', sans-serif;
+    font-size: 34pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin: 0px; 
+}
+
+header#cabecalho h2{
+    font-family: 'open sans';
+    font-size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin: 0px
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'fontelogo';
+    font-size: 20pt;
+    color: dimgrey;
+    margin-bottom: 0px;
+}
+
+header#cabecalho-artigo h3{
+    font-family: calibri;
+    color: lightgrey;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 1px;
+}
+
+header#cabecalho-artigo h3#atualizado{
+    font-family: calibri;
+    color: darkgrey;
+    font-size: 9pt;
+    font-weight: bold;
+    text-align: right
+}
+
+body {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+
+
+/* Formatação de imagens com legendas*/
+
+figure.foto-legenda{ /*toda tag "figure" que tem a classe "foto-legenda"*/
+	position: relative; /*relative: o objeto não passa do container*/
+	border: 8px solid white;
+	box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img {
+	width: 100%;
+	height: 100%;
+}
+
+figure.foto-legenda figcaption {
+	opacity: 0; /*inicialmente não aparece o efeito*/
+	position: absolute; 
+	top: 0px; /*para não ter margem acima*/
+	background-color: rgba(0,0,0,.4); /*cor do fundo qnd aparece*/
+	color: white; /*cor da letra*/
+	width: 100%; /*tem que ser 100% para pegar todo o container*/
+	height: 100%; /*tem que ser 100% para pegar todo o container*/
+	box-sizing: border-box; /*box dentro da borda e não ultrapassar*/
+	transition: opacity 1s; /*efeito de transição de 1 segundo*/
+}
+
+figure.foto-legenda:hover figcaption{
+	opacity: 1; /*a opacidade vai a 100% "0 a 1" qnd o cursor está em cima da imagem*/
+}
+
+nav#menu{
+	display: block;
+    text-align: center;
+    padding-left: 0px;
+}
+
+nav#menu li:hover{
+    transition: 0.5s;
+    background-color: darkblue;
+    color: #ffffff;
+}
+
+nav#menu a{
+    text-decoration: none;
+    color: #000000;
+}
+
+nav#menu a:hover{
+        color: #ffffff;
+}
+
+nav#menu ul{ /*toda tag "nav" com id "menu"*/
+	list-style: none; /*sair icones de lista*/
+	text-transform: uppercase;
+	position: fixed;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(0,0,0,.7);
+    top: -17px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+
+}
+
+nav#menu li{
+	display: inline-block; /*itens do menu horizontal*/
+	background-color: #dddddd;
+	padding: 7px; /*espaçamento dentro da caixa*/
+	margin: 4px; /*espaçamento fora/entre as caixas do menu*/
+}
+
+nav#menu h1 {
+	display: none;
+    
+}
+
+div#interface{
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    width: 910px;
+    box-shadow: 1px 1px 4px black;
+    position: relative;
+    top: 32px;
+}
+
+
+table#tabelaspec {
+    border: 1px solid grey;
+    border-spacing: 0px;
+    margin: auto;
+}
+
+table#tabelaspec th{
+    background-color: darkslategrey;
+    color: #ffffff;
+    font-family: calibri;
+    font-weight: bold;
+    vertical-align: top;
+    text-align: right;
+    padding: 5px;
+}
+
+
+table#tabelaspec td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    background-color: darkgrey;
+    font-family: calibri;
+    font-weight: bold;
+    color: black;
+}
+
+table#tabelaspec caption{
+    font-family: calibri;
+    font-weight: bolder;
+    font-size: 13pt;
+}
+
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    font-size: 10pt;
+    margin-top: 10px;
+}
+
+
+section#corpo {
+    display: block; /*para ser mostrado como um bloco*/
+    width: 550px;
+    border-right: 1px #606060 solid;
+    padding: 10px;
+    float: left;
+}
+
+article#noticia-principal h2{
+    text-align: left;
+    background-color: rgba(0, 0, 0, .1);;
+    color: dimgrey;
+    font-family: calibri;
+    padding-left: 8px;
+}
+
+aside#lateral {
+    background-color: rgba(0, 0, 0, .1);
+    display: block;
+    width: 300px;
+    padding: 10px;
+    float: right;
+    margin-top: 10px;
+}
+
+aside#lateral h1{
+    color: white;
+    font-family: fontelogo;
+    color: dimgrey;
+}
+
+aside#lateral h3{
+    color: white;
+    font-family: calibri;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: dimgrey;
+    padding: 7px;
+    margin-bottom: 0px;
+}
+
+footer#rodape {
+    clear: both;
+    border-top: 1px #606060 solid;
+}
+
+footer#rodape p{
+    text-align: center;
+    margin: 5px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

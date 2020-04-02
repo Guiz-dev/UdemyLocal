@@ -1,0 +1,11 @@
+
+iframe#framespec{
+    width: 400px;
+    height: 290px;
+    border: none;
+    margin: auto;
+}
+
+iframe#framespec::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,38 @@
+@charset utf-8;
+
+form{
+    width: 500px;
+    margin: auto;
+    background: url(../_imagens/icone-contato.png) no-repeat;
+    
+}
+
+form p{
+    font-family: calibri;
+    margin-left: -50px
+}
+
+input:hover, textarea:hover{
+    background-color: whitesmoke;
+}
+
+form fieldset legend{
+    font-family: calibri;
+    font-weight: bold;
+    color: grey;
+}
+
+fieldset#sexo{
+    width: 100px;
+    height: 90px;
+    padding: 0;
+}
+
+form fieldset#sexo input{
+
+}
+
+form fieldset{
+    margin: 20px;
+}
+

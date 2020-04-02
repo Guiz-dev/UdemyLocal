@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fale conosco</title>
+    <link rel="stylesheet" href="_css/estilo.css" />
+    <link rel="stylesheet" href="_css/form.css" />
+    <script>
+        function calcula(){
+            var qqtd = parseInt(document.getElementById('qtd').value);
+            var tot = qqtd*1500;
+            document.getElementById('total').value = tot;
+        }
+    </script>
+</head>
+
+<body>
+
+    
+
+    <div id="interface">
+        <header id="cabecalho">
+            <!--"header" significa cabeçalho-->
+            <hgroup>
+                <h1> Google Glass</h1>
+                <h2> A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens/contato.png" />
+
+        </header>
+
+        <section>
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h3>por Guilherme H F Marques</h3>
+                        <h3 id="atualizado"> Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
+
+
+                <form action="index.html" method="get" oninput="calcula()"> <!--"oninput" quando eu digitar ele vai disparar o método "calcula()" -->
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                        <p>Nome: <input type="text" name="tUsuario" id="iUsiario" placeholder=" Nome Completo" size="30" maxlength="40" /></p>
+
+                        <p>Senha: <input type="password" name="senhaUsuario" id="iSenha" size="8" maxlength="8" placeholder=" 8 caracteres"></p>
+                        <p>E-mail: <input type="email" name="eMail" id="iMail" size="15" maxlength="20" placeholder=" Digite seu e-mail"></p>
+                        <fieldset id="sexo">
+                            <legend>Sexo:</legend>
+                            <p><input type="radio" name="sexo" id="imasc"><label for="imasc">Masculino</label></p>
+                            <p><input type="radio"  name="sexo" id="ifem"><label for="ifem">Feminino</label></p>
+                        </fieldset>
+                        <p>Data de Nascimento: <input type="date"></p>
+                    </fieldset>
+
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <p>Logradouro: <input type="text" placeholder="Rua, Av, Trav,..." maxlength="50" size="20">
+                            Número: <input type="number" min="0" max="9999"></p>
+                        <p>Estado:
+                            <select>
+                                <optgroup label="Região Leste"> 
+                                    <option value="SP">São Paulo</option>
+                                    <option value="RJ" selected>Rio de Janeiro</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PR">Paraná</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <p> Cidade: <input type="text" list="lista">
+                            <datalist id="lista">
+                                <option value="Vila Cisper"></option>
+                            </datalist>
+                        </p>
+                    </fieldset>
+
+                    <fieldset id="mensagem">
+                        <legend>Mensagem</legend>
+                        <p>Grau de Urgência: Min <input type="range" min="0" max="10" step="2"> Max </p>
+                        <p> Mensagem:
+                            <textarea name="area de texto" id="areaTexto" cols="30" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                        </p> 
+                    </fieldset>
+
+                    <fieldset id="quero">
+                        <legend>Quero um Google Glass</legend>
+                        <p><input type="checkbox" value="adquirir" id="iAdquirir" checked>Gostaria de adquirir um Google Glass quando disponível</p>
+                        <p>Cor: <input type="color" value="#0000FF"></p>
+                        <p>Quantidade: <input type="number" min="0" max="99" id="qtd"></p>
+                        <p>Preço Total: R$ <input type="text" id="total" placeholder=" Total a Pagar" readonly></p>
+                    </fieldset>
+                    <input type="image" src="_imagens/botao-enviar.png"/>
+                </form>
+
+            </article>
+        </section>
+        <footer id="rodape">
+            <p>Copyright 2013 - by Guilherme H F Marques <br />
+                <a href="https://www.facebook.com/valdoana1010" target="_blank"> Facebook </a> | <a href="https://twitter.com/" target="_blank">Twitter</a></p>
+        </footer>
+    </div>
+    
+    <nav id="menu" onmouseout="mudaFoto('contato')">
+        <h1>Menu Principal</h1>
+        <ul>
+            <li onmousemove="mudaFoto('home')"> <a href="index.html"> Home</a></li>
+            <li onmousemove="mudaFoto('especificacoes')"> <a href="specs.html"> Especificações</a></li>
+            <li onmousemove="mudaFoto('fotos')"> <a href="fotos.html"> Fotos</a></li>
+            <li onmousemove="mudaFoto('multimidia')"> <a href="multimidia.html">Multimídia</a> </li>
+            <li onmousemove="mudaFoto('contato')"> <a href="fale-conosco.html"> Fale conosco</a></li>
+        </ul>
+    </nav>
+</body></html>

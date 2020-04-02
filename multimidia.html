@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multimidia</title>
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/media.css">
+    <script src="_javascript/funcoes.js"></script>
+</head>
+
+<body>
+
+    <div id="interface">
+        <header id="cabecalho">
+            <!--"header" significa cabeçalho-->
+            <hgroup>
+                <h1> Google Glass</h1>
+                <h2> A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens/multimidia.png" />
+
+        </header>
+
+        <section>
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Glass > Multimídia</h3>
+                        <h1>Sons e Vídeo</h1>
+                        <h3>por Guilherme H F Marques</h3>
+                        <h3 id="atualizado"> Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
+
+
+                <p>Áudio e Vídeo</p>
+
+                <div id="tv-radio">
+                    <audio id="musica" controls="controls">
+                        <source src="_media/2009-lovers-carvings-bibio.mp3">
+                    </audio>
+
+                    <video src="_media/getting-started.mp4" id="filme" controls poster="_imagens/video-mini03.jpg"></video>
+                </div>
+            </article>
+        </section>
+
+        <nav id="menu" onmouseout="mudaFoto('multimidia')">
+            <h1>Menu Principal</h1>
+            <ul>
+                <li onmousemove="mudaFoto('home')"> <a href="index.html"> Home</a></li>
+                <li onmousemove="mudaFoto('especificacoes')"> <a href="specs.html"> Especificações</a></li>
+                <li onmousemove="mudaFoto('fotos')"> <a href="fotos.html"> Fotos</a></li>
+                <li onmousemove="mudaFoto('multimidia')"> <a href="multimidia.html">Multimídia</a> </li>
+                <li onmousemove="mudaFoto('contato')"> <a href="fale-conosco.html"> Fale conosco</a></li>
+            </ul>
+        </nav>
+        <footer id="rodape">
+            <p>Copyright 2013 - by Guilherme H F Marques <br />
+                <a href="https://www.facebook.com/valdoana1010" target="_blank"> Facebook </a> | <a href="https://twitter.com/" target="_blank">Twitter</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
